@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Introduction to HTML Forms</title>
+</head>
+<body>
+    <h1>HTML Form</h1>
+    <form action="#">
+
+        <p>Simple Text Control*: <input type="text" value="Muhammad Afzal" name="txtUserName" id="txtUserName" required  size="40" maxlength="30"  readonly  /></p>
+        <p>Password Control*: <input type="password" name="txtPassword" id="txtPassword" required placeholder="Please Enter Password" size="40" maxlength="30" /></p>
+        <p>Email Control*: <input type="email" name="txtEmail" id="txtEmail" required placeholder="Please Enter Your Personal Email Address" maxlength="30" size="40"/></p>
+        <p>Number Control*: <input type="number" name="txtNumber" id="txtNumber" required placeholder="Please Enter the Qty" size="40"  maxlength="3" /></p>
+        <p>Color Control: <input type="color" name="txtColor" id="txtColor" /></p>
+        <p>Date Control: <input type="date" name="txtDate" id="txtDate" /></p>
+        <p>File Control:<input type="file" name="txtFile" id="txtFile" /></p>
+        <p>Range Control: <input type="range" name="txtRange" id="txtRange" /></p>
+        <p>Telephone Control:<input type="tel" name="txtTel" id="txtTel" /></p>
+
+
+        <p>Checkbox Control:<input type="checkbox" name="chkControl" id="chkControl" /></p>
+
+        <h1>Radio Button Controls</h1>
+        <p>
+           Male:<input type="radio" name="txtGender" value="male" /> 
+           Female<input type="radio" name="txtGender" value="Female" />
+        </p>
+        <h1>Select Control</h1>
+        <select name="selCity">
+            <option value="---" selected>---Select---</option>
+            <option value="SGD">Sargodha</option>
+            <option value="LHR">Lahore</option>
+            <option value="KHI" >Karachi</option>
+        </select>
+
+        <h1>For Long Text</h1>
+        <textarea name="txtBio" rows="10" cols="50"></textarea>
+        
+        <p><input type="reset" value="Clear" /> <input type="submit" value="Send" name="btnSend" /></p>
+        
+    </form>
+</body>
+</html>
