@@ -1,0 +1,16 @@
+body{
+    background-color: gray;
+}
+#orange-color{
+    color:orange;
+}
+#red-color{
+    color:red;
+}
+#yellow-color{
+    color:yellow;
+}
+
+.lg-color{
+    color:rgb(190, 14, 176);
+}
