@@ -15,12 +15,13 @@
         </div>
         <!--User Add Form Start-->
         <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
+                <input type="hidden" name="txtUserID" value="<?php echo $txtUserID; ?>" />
             <div class="row justify-content-center mb-2">
                 <div class="col-1 my-auto">
                     <h6>User Name</h6>
                 </div>
                 <div class="col-2">
-                    <input type="text" name="txtUserName" required  class="form-control" />
+                    <input type="text" name="txtUserName" value="<?php echo $txtUserName; ?>" required  class="form-control" />
                 </div>
             </div>
             <div class="row justify-content-center mb-2">
@@ -44,7 +45,7 @@
                     <h6>Enabled?</h6>
                 </div>
                 <div class="col-2 my-auto">
-                    <input type="checkbox" checked name="txtED" class="form-control" />
+                    <input type="checkbox" <?php echo $txtED==1?'checked':''; ?> name="txtED" class="form-control" />
                 </div>
             </div>
             <div class="row justify-content-center my-2">
