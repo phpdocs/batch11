@@ -1,3 +1,4 @@
+<?php require_once("helper/auth_helper.php"); ?>
 <?php require_once("template/header.php"); ?>
 <?php require_once("helper/user_helper.php"); ?>
 

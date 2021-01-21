@@ -20,9 +20,25 @@
         <div class="collapse navbar-collapse" id="collapsibleNavId">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="index.php">Home<span class="sr-only">(current)</span></a>
+                </li>
+                
+                <li class="nav-item active">
+                    <a class="nav-link" href="product.php">Products<span class="sr-only">(current)</span></a>
                 </li>
             </ul>
+            <?php  
+                $FileName=explode("/",$_SERVER['PHP_SELF']);
+
+             if($FileName[count($FileName)-1]!="login.php"){ ?>
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                
+                <li class="nav-item">
+                <p>Hi, <?php echo $_SESSION['UserName']; ?> Welcome to Admin Panel <a  href="logout.php">Logout<span class="sr-only">(current)</span></a></p>
+                </li>
+    
+            </ul>
+            <?php }?>
         </div>
     </nav>
       <!--Nav Bar End-->
