@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Select The City</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            //Firstly Load the Countries
+            $.get("data.php?country=1",function(data,status){
+                CountriesArray=data.split(",");
+                for(a=0;a<CountriesArray.length-1;a++){
+                    country=CountriesArray[a].split(":");
+                    $("#selCountry").append(new Option(country[1],country[0]));
+                }
+            });
+        });
+
+        function CountryChange(sel){
+            console.log(sel.value)
+            if(sel.value!="select"){
+                $('#selState').empty().append('<option value="select">--Select--</option>');
+                //Firstly Load the Countries
+                $.get("data.php?state="+sel.value,function(data,status){
+                    CountriesArray=data.split(",");
+                    for(a=0;a<CountriesArray.length-1;a++){
+                        country=CountriesArray[a].split(":");
+                        $("#selState").append(new Option(country[1],country[0]));
+                    }
+                });
+            }   
+        }
+
+        function StateChange(sel){
+            console.log(sel.value)
+            if(sel.value!="select"){
+                $('#selCity').empty().append('<option value="select">--Select--</option>');
+                //Firstly Load the Countries
+                $.get("data.php?city="+sel.value,function(data,status){
+                    CountriesArray=data.split(",");
+                    for(a=0;a<CountriesArray.length-1;a++){
+                        country=CountriesArray[a].split(":");
+                        $("#selCity").append(new Option(country[1],country[0]));
+                    }
+                });
+            }  
+        }
+    </script>
+</head>
+<body>
+    Country:
+    <select id="selCountry" onchange="CountryChange(this)">
+        <option value="select">--Select--</option>
+    </select>
+    <br />
+    State:
+    <select id="selState" onchange="StateChange(this)">
+        <option value="select">--Select--</option>
+    </select>
+    <br />
+    City:
+    <select id="selCity">
+        <option value="select">--Select--</option>
+    </select>
+</body>
+</html>
